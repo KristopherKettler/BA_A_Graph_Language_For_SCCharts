@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.jabc.cinco.meta.core.ge.style.sdk"
+      label="Style SDK Feature "
+      version="2.0.1">
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ge.style"
+         download-size="1569"
+         install-size="2007"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ge.style.ui"
+         download-size="222"
+         install-size="865"
+         version="2.0.1"
+         unpack="false"/>
+
+</feature>

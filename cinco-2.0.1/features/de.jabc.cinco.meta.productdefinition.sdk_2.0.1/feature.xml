@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.jabc.cinco.meta.productdefinition.sdk"
+      label="CPD SDK Feature "
+      version="2.0.1">
+
+   <plugin
+         id="de.jabc.cinco.meta.productdefinition"
+         download-size="133"
+         install-size="331"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.productdefinition.ui"
+         download-size="90"
+         install-size="326"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.productdefinition.model"
+         download-size="42"
+         install-size="103"
+         version="2.0.1"
+         unpack="false"/>
+
+</feature>

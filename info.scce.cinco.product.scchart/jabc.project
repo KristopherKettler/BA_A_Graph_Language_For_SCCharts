@@ -1,0 +1,13 @@
+#Saving jABC Project
+#Tue Mar 21 11:07:29 CET 2023
+transem.SIBDir=slg-gen/
+transem.other.ePackage.0=org.eclipse.graphiti.mm.algorithms.impl.AlgorithmsPackageImpl
+jabc.project.classpath.0=\\bin\\
+transem.qualified.package=info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage
+jabc.project.name=SCChart
+transem.codegenerator.targetDir=src-gen/
+jabc.project.sibpath.0=<classpath>
+ID=9228df28-7327-4d84-b41c-d6e122d80b11
+jabc.project.definition=1.0
+transem.codegenerator.sourceDir=slg/
+transem.other.ePackage.1=org.eclipse.graphiti.mm.pictograms.impl.PictogramsPackageImpl

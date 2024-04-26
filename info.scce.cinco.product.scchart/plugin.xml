@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<extension
+	point="org.eclipse.ui.perspectives">
+	<perspective
+		class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective"
+		fixed="false"
+		id="info.scce.cinco.product.scchart.sccharttoolperspective"
+		name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.ui.newWizards">
+<!--@CincoGen PROJECT_WIZARD_SCCHARTTOOL_WIZ -->
+<wizard category="de.jabc.cinco.meta.core.wizards.category.cinco" class="info.scce.cinco.product.scchart.SCChartToolProjectWizard" id="info.scce.cinco.product.scchart.wizard.sccharttoolproject" name="New SCChartTool Project" project="true">
+</wizard>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="de.jabc.cinco.meta.runtime.startup"><startupclass cincoProductID="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.mglid.scchart.event.EventStartup"/></extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.ScchartPackage" uri="http://cinco.scce.info/product/scchart/mglid"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.internal.InternalPackage" uri="http://cinco.scce.info/product/scchart/mglid/internal"/>
+   </extension><extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SCChartTool -->
+      <package class="info.scce.cinco.product.scchart.mglid.scchart.views.ViewsPackage" uri="http://cinco.scce.info/product/scchart/mglid/views"/>
+   </extension><extension point="de.jabc.cinco.meta.plugin.generator.runtime.registry">
+<!--@MetaPlugin Generatable SCChart-->
+<graphmodel class="info.scce.cinco.product.scchart.mglid.scchart.SCChart">
+</graphmodel>
+<generator bundle_id="info.scce.cinco.product.scchart" class="info.scce.cinco.product.scchart.generator.CodeGenerator" outlet="Code">
+</generator>
+</extension><extension point="org.eclipse.ui.perspectives">
+	<perspective class="info.scce.cinco.product.scchart.perspective.SCChartToolPerspective" fixed="false" id="info.scce.cinco.product.scchart.sccharttoolperspective" name="SCChartTool Perspective">
+	</perspective>
+</extension><extension point="org.eclipse.ui.navigator.navigatorContent">
+<!--@CincoGen PROJECT_WIZARD_SCCHARTTOOL_NAV -->		
+<commonWizard menuGroupId="mgl" type="new" wizardId="info.scce.cinco.product.scchart.wizard.sccharttoolproject">
+	<enablement/>
+</commonWizard>
+</extension></plugin>

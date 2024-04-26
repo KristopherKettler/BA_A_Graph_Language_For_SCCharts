@@ -1,0 +1,50 @@
+[2023-03-21 10:56:16] Executing startup tasks
+[2023-03-21 10:56:16] OpenJDK Runtime Environment 11.0.17+8
+[2023-03-21 10:56:16] Product self.product.version
+[2023-03-21 10:56:16] Workspace C:\Users\Kris\Desktop\cinco-2.0.1-win32.win32.x86_64(3)\Workspace
+[2023-03-21 10:56:16] Bundle org.eclipse.oomph.setup 1.17.0.v20200606-0914, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-03-21 10:56:16] Bundle org.eclipse.oomph.setup.core 1.17.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-03-21 10:56:16] Bundle org.eclipse.oomph.setup.p2 1.15.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-03-21 10:56:16] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform = 11
+[2023-03-21 10:56:16] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance = 11
+[2023-03-21 10:56:16] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source = 11
+[2023-03-21 10:56:16] 
+[2023-03-21 11:06:42] Executing startup tasks
+[2023-03-21 11:06:42] OpenJDK Runtime Environment 11.0.17+8
+[2023-03-21 11:06:42] Product self.product.version
+[2023-03-21 11:06:42] Workspace C:\Users\Kris\Desktop\cinco-2.0.1-win32.win32.x86_64(3)\Workspace\SCCharts-MME
+[2023-03-21 11:06:42] Bundle org.eclipse.oomph.setup 1.17.0.v20200606-0914, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-03-21 11:06:42] Bundle org.eclipse.oomph.setup.core 1.17.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-03-21 11:06:42] Bundle org.eclipse.oomph.setup.p2 1.15.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-03-21 11:06:42] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform = 11
+[2023-03-21 11:06:42] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance = 11
+[2023-03-21 11:06:42] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source = 11
+[2023-03-21 11:06:42] 
+[2023-05-30 10:24:11] Executing startup tasks
+[2023-05-30 10:24:11] OpenJDK Runtime Environment 11.0.17+8
+[2023-05-30 10:24:11] Product self.product.version
+[2023-05-30 10:24:11] Workspace C:\Users\Kris\Desktop\SCChart-ME
+[2023-05-30 10:24:11] Bundle org.eclipse.oomph.setup 1.17.0.v20200606-0914, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-05-30 10:24:11] Bundle org.eclipse.oomph.setup.core 1.17.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-05-30 10:24:11] Bundle org.eclipse.oomph.setup.p2 1.15.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-05-30 10:24:11] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode = enabled
+[2023-05-30 10:24:11] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform = 1.8
+[2023-05-30 10:24:11] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance = 1.8
+[2023-05-30 10:24:11] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier = error
+[2023-05-30 10:24:11] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.enumIdentifier = error
+[2023-05-30 10:24:11] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source = 1.8
+[2023-05-30 10:24:11] 
+[2023-05-30 10:25:30] Executing startup tasks
+[2023-05-30 10:25:30] OpenJDK Runtime Environment 11.0.17+8
+[2023-05-30 10:25:30] Product self.product.version
+[2023-05-30 10:25:30] Workspace C:\Users\Kris\Desktop\Workspace
+[2023-05-30 10:25:30] Bundle org.eclipse.oomph.setup 1.17.0.v20200606-0914, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-05-30 10:25:30] Bundle org.eclipse.oomph.setup.core 1.17.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-05-30 10:25:30] Bundle org.eclipse.oomph.setup.p2 1.15.0.v20200531-1047, build=4683, branch=11a8454bc4da69195dc3e9f065bbd8fe43f77e1e
+[2023-05-30 10:25:30] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode = enabled
+[2023-05-30 10:25:30] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform = 1.8
+[2023-05-30 10:25:30] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance = 1.8
+[2023-05-30 10:25:30] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier = error
+[2023-05-30 10:25:30] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.enumIdentifier = error
+[2023-05-30 10:25:30] Performing Preference /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source = 1.8
+[2023-05-30 10:25:30] 

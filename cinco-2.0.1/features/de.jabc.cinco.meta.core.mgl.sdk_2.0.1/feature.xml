@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="de.jabc.cinco.meta.core.mgl.sdk"
+	label="MGL SDK Feature "
+	version="2.0.1">
+	<plugin
+			id="de.jabc.cinco.meta.core.mgl"
+			download-size="1737"
+			install-size="2424"
+			version="2.0.1"
+			unpack="false"/>
+	<plugin
+			id="de.jabc.cinco.meta.core.mgl.ui"
+			download-size="284"
+			install-size="1096"
+			version="2.0.1"
+			unpack="false"/>
+</feature>

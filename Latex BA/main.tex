@@ -1,0 +1,44 @@
+% main.tex
+\include{header}
+\begin{document}
+
+\selectlanguage{english}
+\include{kapitel/titelseite}
+\blankpage
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+
+% Kapitel
+\include{kapitel/00_abstract}
+\include{kapitel/01_introduction}
+\include{kapitel/02_foundations}
+\include{kapitel/03_related_work}
+\include{kapitel/04_frameworks_and_tools}
+\include{kapitel/05_Development_of_the_Graph_Language}
+\include{kapitel/06_evaluation}
+\include{kapitel/07_conclusion}
+% Anhang
+\appendix
+\include{kapitel/anhang}
+% Abbildungsverzeichnis
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\cleardoublepage
+% Algorithmenverzeichnis
+\listofalgorithms
+\addcontentsline{toc}{chapter}{Algorithmenverzeichnis}
+\cleardoublepage
+% Literaturverzeichnis
+\bibliographystyle{gerplain}
+\bibliography{literatur/citation}
+\addcontentsline{toc}{chapter}{\bibname}
+% Erklaerung
+\thispagestyle{myheadings}
+\markboth{}{ERKLÄRUNG}
+\addcontentsline{toc}{chapter}{Erklärung}
+\include{kapitel/erklaerung}
+\cleardoublepage
+\end{document}
+

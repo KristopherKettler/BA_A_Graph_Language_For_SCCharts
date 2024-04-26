@@ -1,0 +1,12 @@
+\chapter{Summary and Outlook} \label{Conclusion}
+The final chapter summarises the presented solution and gives an outlook on improvements and extensions of the SCCharts editor.
+
+\section{Summary}
+While DSLs have the potential to empower domain experts to independently create models, reducing their reliance on programmers, they are currently underutilized. This is primarily due to the perception that developing tools for such DSLs is a laborious and time-consuming process.
+
+To challenge this assumption, this bachelor thesis presented the development of a DSL tool using \textsc{Cinco}. \textsc{Cinco} is a tool designed for creating domain-specific graphical modeling tools with a focus on full generation of this tools from high-level specifications. The development process was demonstrated using SCCharts, a visual modeling language specifically designed for specifying safety-critical reactive systems, serving as a representative of a graph-based modeling language.
+
+The project began with the definition of requirements for the editor to be developed. Subsequently, a data structure was designed based on the SCCharts syntax, encompassing all essential attributes and associations of SCCharts components. This data structure was used for the implementation of the MGL. Subsequently, the visual representation of the components in the editor was defined with the SGL. To enhance user-friendliness, meta plugins from \textsc{Cinco} were used to improve the handling of the editor. Additionally, a code generator was implemented, making use of the KIELER Compiler CLI, allowing for the generation of Java or C code and diagrams from the created model.
+
+The evaluation of the user interface, visual syntax, and code generator of the developed editor demonstrated that the created DSL tool is a valuable asset for SCCharts modeling. This project has shown that a functional DSL tool can be created with relative ease, disproving the notion that DSL tool development is overly complex and tedious.
+\section{Outlook}

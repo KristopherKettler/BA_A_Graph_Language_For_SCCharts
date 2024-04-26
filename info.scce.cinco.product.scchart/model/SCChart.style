@@ -1,0 +1,755 @@
+appearance default {
+	lineWidth 2
+	background (198,226,255) //LightSlateGrey 
+	foreground (119,136,153) //LightSlateGrey 
+}
+
+appearance declarationAppearance {
+	lineWidth 0
+	background (198,226,255) //SlateGrey2 
+	foreground (198,226,255) //LightSlateGrey 
+}
+
+appearance declarationText {
+	font ("Sans",BOLD,8)
+}
+
+appearance textHighlight {
+	font ("Sans",BOLD,8)
+	foreground (166, 0, 99)
+	background (166, 0, 99)
+}
+
+appearance finalStateOuterCircle {
+	lineWidth 2
+	foreground (119,136,153) //LightSlateGrey 
+}
+
+appearance initialFinalStateOuterCircle {
+	lineWidth 3
+}
+
+appearance superStateAppearance {
+	background (198,226,255) //SlateGrey2 
+	foreground (119,136,153) //LightSlateGrey 
+}
+
+appearance initialSuperStateAppearance {
+	background (198,226,255) //SlateGrey2 
+	foreground (0,0,0) //Black
+	lineWidth 3
+}
+
+appearance regionAppearance {
+	foreground (119,136,153) //LightSlateGrey 
+}
+
+appearance initialStateAppearance {
+	background (198,226,255) //LightSlateGrey 
+	lineWidth 4
+}
+
+appearance connector {
+	background (0,0,0) //Black
+}
+
+appearance sCChartRefereceAppearance {
+	background (255,207,241) //purple
+}
+
+appearance initialSCChartRefereceAppearance {
+	background (255,207,241) //purple
+	lineWidth 4
+}
+
+appearance transitionAppearance {
+	lineStyle SOLID
+	lineWidth 2
+}
+
+appearance greenTriangle {
+	background (50,205,50) 
+}
+
+appearance redCircle {
+	background (255,0,0) //Red
+}
+
+appearance historyCircle {
+	background (0,0,0)
+}
+
+appearance historyH {
+	font ("Sans",10)
+	foreground (255,255,255)
+}
+
+appearance textFont {
+	font ("Sans",10)
+}
+
+/*rootstate style */
+nodeStyle rootStateStyle(1) {
+	roundedRectangle {
+		appearance superStateAppearance
+		size (800,1000)
+		corner (15,15)
+		text {
+			appearance textFont
+			position (CENTER,TOP 3)
+			value "%1$s"
+		}
+	}
+}
+
+/*region style */
+nodeStyle regionStyle(1) {
+	rectangle {
+		appearance regionAppearance
+		text {
+			appearance textFont
+			position (LEFT 3,TOP 3)
+			value "%1$s"
+		}
+	}
+}
+
+/*superstate style */
+nodeStyle superStateStyle(1) {
+	roundedRectangle {
+		appearance superStateAppearance
+		size (140,80)
+		corner (15,15)
+		text {
+			appearance textFont
+			position (CENTER,TOP 3)
+			value "%1$s"
+		}
+	}
+}
+
+nodeStyle initialSuperStateStyle(1) {
+	roundedRectangle {
+		appearance initialSuperStateAppearance
+		size (140,80)
+		corner (15,15)
+		text {
+			appearance textFont
+			position (CENTER,TOP 3)
+			value "%1$s"
+		}
+	}
+}
+
+nodeStyle finalSuperStateStyle(1) {
+	roundedRectangle {
+		appearance regionAppearance
+		size (140,80)
+		corner (15,15)
+		roundedRectangle {
+			appearance superStateAppearance
+			position (CENTER,MIDDLE)
+			size (134,74)
+			corner (15,15)
+			text {
+				appearance textFont
+				position (CENTER,TOP 3)
+				value "%1$s"
+			}
+		}
+	}
+}
+
+nodeStyle initialFinalSuperStateStyle(1) {
+	roundedRectangle {
+		appearance initialFinalStateOuterCircle
+		size (140,80)
+		corner (15,15)
+		roundedRectangle {
+			appearance superStateAppearance
+			position (CENTER,MIDDLE)
+			size (134,74)
+			corner (15,15)
+			text {
+				appearance textFont
+				position (CENTER,TOP 3)
+				value "%1$s"
+			}
+		}
+	}
+}
+
+/*declaration style */
+nodeStyle declarationStyle(2) {
+	rectangle {
+		appearance declarationAppearance
+		size (140,80)
+		text {
+			appearance declarationText
+			position (LEFT 5,MIDDLE)
+			value "%1$s %2$s"
+		}
+		text {
+			appearance textHighlight
+			position (LEFT 5,MIDDLE)
+			value "%1$s"
+		}
+	}
+}
+
+/*state style */
+nodeStyle simpleStateStyle(1) {
+	ellipse {
+		appearance default
+		size (60,60)
+		text {
+			position (CENTER,MIDDLE)
+			value "%s"
+		}
+	}
+}
+
+nodeStyle initialStateStyle(1) {
+	ellipse{
+		appearance initialStateAppearance
+		size (60,60)
+		text {
+			position (CENTER,MIDDLE)
+			value "%s"
+		}
+	}
+}
+
+nodeStyle finalStateStyle(1) {
+	ellipse{
+		appearance finalStateOuterCircle
+		size (60,60)
+		ellipse {
+			appearance default
+			position (CENTER,MIDDLE)
+			size (50,50)
+			text {
+				position (CENTER,MIDDLE)
+				value "%s"
+			}
+		}
+	}
+}
+
+nodeStyle initialFinalStateStyle(1) {
+	ellipse {
+		appearance initialFinalStateOuterCircle
+		size (60,60)
+		ellipse {
+			appearance default
+			position (CENTER,MIDDLE)
+			size(50,50)
+			text {
+				position (CENTER,MIDDLE)
+				value "%s"
+			}
+		}
+	}
+}
+
+nodeStyle connectorStyle {
+	ellipse {
+		appearance connector
+		size (10,10)
+	}
+}
+
+nodeStyle sCChartRefereceStyle(1) {
+	roundedRectangle {
+		appearance sCChartRefereceAppearance
+		size (140,80)
+		corner (15,15)
+		text {
+			position (CENTER,TOP)
+			value "%s"
+		}
+	}
+}
+
+nodeStyle initialSCChartRefereceStyle(1) {
+	roundedRectangle {
+		appearance initialSCChartRefereceAppearance
+		size (140,80)
+		corner (15,15)
+		text {
+			appearance textFont
+			position (CENTER,TOP 3)
+			value "%1$s"
+		}
+	}
+}
+
+nodeStyle finalSCChartRefereceStyle(1) {
+	roundedRectangle {
+		appearance regionAppearance
+		size (140,80)
+		corner (15,15)
+		roundedRectangle {
+			appearance sCChartRefereceAppearance
+			position (CENTER,MIDDLE)
+			size (134,74)
+			corner (15,15)
+			text {
+				appearance textFont
+				position (CENTER,TOP 3)
+				value "%1$s"
+			}
+		}
+	}
+}
+
+nodeStyle initialFinalRefereceStyle(1) {
+	roundedRectangle {
+		appearance initialFinalStateOuterCircle
+		size (140,80)
+		corner (15,15)
+		roundedRectangle {
+			appearance sCChartRefereceAppearance
+			position (CENTER,MIDDLE)
+			size (134,74)
+			corner (15,15)
+			text {
+				appearance textFont
+				position (CENTER,TOP 3)
+				value "%1$s"
+			}
+		}
+	}
+}
+
+/*transitionStyles */
+edgeStyle abstractTransitionStyle {
+	appearance transitionAppearance
+}
+
+edgeStyle transitionStyle(1) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.TransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		ARROW
+		appearance transitionAppearance 
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+}
+
+edgeStyle terminationTransitionStyle(1) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.TerminationTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		ARROW
+		appearance transitionAppearance 
+	}
+	decorator {
+		location (0)
+		polygon {
+			appearance greenTriangle 
+			points [(0,0)(0,7)(15,0)(0,-7)]
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+} 
+
+edgeStyle strongAbortTransitionStyle(1) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.StrongAbortTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		ARROW
+		appearance transitionAppearance 
+	}
+	decorator {
+		location (0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+}
+
+edgeStyle deferredTransitionStyle(1) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.DeferredTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		polyline{
+			appearance transitionAppearance
+			points [(-22,-5)(-12,0)(-22,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+}
+
+edgeStyle historyTransitionStyle(2) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.HistoryTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		ellipse {
+			appearance historyCircle
+			size(15,15)
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (1.0)
+		text {
+			appearance historyH
+			value "%2$s"
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance historyH
+			points [(-5,-5)(-5,5)(-5,0)(-10,0)(-10,-5)(-10,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-25,-5)(-15,0)(-25,5)]
+		}
+	}
+}
+
+edgeStyle terminationDeferredTransitionStyle(1) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.TerminationDeferredTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-22,-5)(-12,0)(-22,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (0)
+		polygon {
+			appearance greenTriangle 
+			points [(0,0)(0,7)(15,0)(0,-7)]
+		}
+	}
+}
+
+edgeStyle strongAbortDeferredTransitionStyle(1) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.StrongAbortDeferredTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-22,-5)(-12,0)(-22,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (0)
+		CIRCLE 
+		appearance redCircle
+	}
+}
+
+
+edgeStyle terminationHistoryTransitionStyle(2) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.TerminationHistoryTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		ellipse {
+			appearance historyCircle
+			size(15,15)
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (1.0)
+		text {
+			appearance historyH
+			value "%2$s"
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance historyH
+			points [(-5,-5)(-5,5)(-5,0)(-10,0)(-10,-5)(-10,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-25,-5)(-15,0)(-25,5)]
+		}
+	}
+	decorator {
+		location (0)
+		polygon {
+			appearance greenTriangle 
+			points [(0,0)(0,7)(15,0)(0,-7)]
+		}
+	}
+}
+
+edgeStyle strongAbortHistoryTransitionStyle(2) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.StrongAbortHistoryTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		ellipse {
+			appearance historyCircle
+			size(15,15)
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (1.0)
+		text {
+			appearance historyH
+			value "%2$s"
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline{
+			appearance historyH
+			points [(-5,-5)(-5,5)(-5,0)(-10,0)(-10,-5)(-10,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-25,-5)(-15,0)(-25,5)]
+		}
+	}
+	decorator {
+		location (0)
+		CIRCLE 
+		appearance redCircle
+	}
+}
+
+edgeStyle deferredHistoryTransitionStyle(2) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.DeferredHistoryTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (1.0)
+		ellipse {
+			appearance historyCircle
+			size (15,15)
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (1.0)
+		text {
+			appearance historyH
+			value "%2$s"
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance historyH
+			points [(-5,-5)(-5,5)(-5,0)(-10,0)(-10,-5)(-10,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-25,-5)(-15,0)(-25,5)]
+		}
+	}
+}
+
+edgeStyle strongAbortDeferredHistoryTransitionStyle(2) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.StrongAbortDeferredHistoryTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (1.0)
+		ellipse {
+			appearance historyCircle
+			size(15,15)
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (1.0)
+		text {
+			appearance historyH
+			value "%2$s"
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance historyH
+			points [(-5,-5)(-5,5)(-5,0)(-10,0)(-10,-5)(-10,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-25,-5)(-15,0)(-25,5)]
+		}
+	}
+	decorator {
+		location (0)
+		CIRCLE 
+		appearance redCircle
+	}
+}
+
+edgeStyle terminationDeferredHistoryTransitionStyle(2) {
+	appearanceProvider("info.scce.cinco.product.scchart.appearance.TerminationDeferredHistoryTransitionAppearance")
+	appearance transitionAppearance
+	decorator {
+		location (1.0)
+		CIRCLE 
+		appearance redCircle
+	}
+	decorator {
+		location (1.0)
+		ellipse {
+			appearance historyCircle
+			size (15,15)
+		}
+	}
+	decorator {
+		location (0.5)
+		movable
+		text {
+			value "%s"
+		}
+	}
+	decorator {
+		location (1.0)
+		text {
+			appearance historyH
+			value "%2$s"
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance historyH
+			points [(-5,-5)(-5,5)(-5,0)(-10,0)(-10,-5)(-10,5)]
+		}
+	}
+	decorator {
+		location (1.0)
+		polyline {
+			appearance transitionAppearance
+			points [(-25,-5)(-15,0)(-25,5)]
+		}
+	}
+	decorator {
+		location (0)
+		polygon {
+			appearance greenTriangle 
+			points [(0,0)(0,7)(15,0)(0,-7)]
+		}
+	}
+}

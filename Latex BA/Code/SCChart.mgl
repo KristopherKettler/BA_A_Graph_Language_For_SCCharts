@@ -1,0 +1,305 @@
+id info.scce.cinco.product.scchart.mglid
+stylePath "model/SCChart.style"
+
+@primeviewer
+
+@mcam("check")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.RootStateCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.RegionCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.SuperStateCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.DeclarationCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.SuspensionCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.ActionCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.StateCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.SCChartRefereceCheck")
+@mcam_checkmodule("info.scce.cinco.product.scchart.checks.TransitionCheck")
+
+@generatable("info.scce.cinco.product.scchart.generator.CodeGenerator", "Code")
+
+@event("info.scce.cinco.product.scchart.events.SCChartEvent")
+graphModel SCChart {
+	diagramExtension "scchart"
+	containableElements(RootState[1,1])
+	attr EString as name
+}
+
+@palette
+@disable(delete)
+@event("info.scce.cinco.product.scchart.events.RootStateEvent")
+container RootState {
+	style rootStateStyle ("${empty label ? name : label}")
+	containableElements(Region,Declaration,Suspension,Action)
+	outgoingEdges (*)//without, no edge properties
+	attr EString as name := "<set name>"
+	attr EString as label 
+	@possibleValuesProvider("info.scce.cinco.product.scchart.provider.GeneratorOutputProvider")
+	attr EString as generatorOutput := "Identity Diagram"
+}
+
+/* Regions */
+@palette("Region")
+@disable(resize,move)
+@event("info.scce.cinco.product.scchart.events.RegionEvent")
+container Region {
+	style regionStyle ("${empty label ? (empty name ? '' : name) : label}")
+	containableElements(SuperState,InitialSuperState[0,1],FinalSuperState,InitialFinalState[0,1],SimpleState,InitialState[0,1],FinalState,InitialFinalSuperState[0,1],Connector,SCChartReferece,InitialSCChartReferece,FinalSCChartReferece)
+	attr EString as name
+	attr EString as label
+	@propertiesViewHidden
+	attr EString as uuid
+}
+
+@palette
+@disable(resize,move)
+container RegionRef {
+	style regionStyle ("")
+	containableElements(RootState)
+}
+
+/* SuperStates */
+@palette("SuperStates")
+@event("info.scce.cinco.product.scchart.events.SuperStateEvent")
+container SuperState {
+	style superStateStyle ("${empty label ? name : label}")
+	containableElements(Region,Declaration,Action,Suspension)
+	incomingEdges (Transition,TerminationTransition,StrongAbortTransition,DeferredTransition,TerminationDeferredTransition,StrongAbortDeferredTransition,HistoryTransition,TerminationHistoryTransition,StrongAbortHistoryTransition,DeferredHistoryTransition,StrongAbortDeferredHistoryTransition,TerminationDeferredHistoryTransition)
+	outgoingEdges (Transition,TerminationTransition,StrongAbortTransition,DeferredTransition,TerminationDeferredTransition,StrongAbortDeferredTransition,HistoryTransition,TerminationHistoryTransition,StrongAbortHistoryTransition,DeferredHistoryTransition,StrongAbortDeferredHistoryTransition,TerminationDeferredHistoryTransition)
+	attr EString as name := "<set name>"
+	attr EString as label
+}
+
+@palette("SuperStates")
+container InitialSuperState extends SuperState{
+	style initialSuperStateStyle ("${empty label ? name : label}")
+}
+
+@palette("SuperStates")
+container FinalSuperState extends SuperState{
+	style finalSuperStateStyle ("${empty label ? name : label}")
+}
+
+@palette("SuperStates")
+container InitialFinalSuperState extends SuperState{
+	style initialFinalSuperStateStyle ("${empty label ? name : label}")
+}
+
+/* Declarations */
+@palette("Declaration")
+@disable(move,resize)
+@event("info.scce.cinco.product.scchart.events.DeclarationEvent")
+node Declaration {
+	style declarationStyle("${(empty inputOutput || inputOutput == ' ' ? '' : (inputOutput.concat(' '))).concat(empty constant || !constant ? '' : 'const ').concat(empty signal || !signal ? '' : 'signal ').concat(empty declarationType || declarationType == ' ' ? '' : declarationType)}", "${(empty name || name == ' ' ? '' : (name.concat(empty assignment || assignment == ' ' ? '' : (' = '.concat(assignment)))))}")
+	@possibleValuesProvider("info.scce.cinco.product.scchart.provider.DeclarationInputOutputProvider")
+	attr EString as inputOutput := ' '
+	attr EBoolean as constant
+	attr EBoolean as signal
+	@possibleValuesProvider("info.scce.cinco.product.scchart.provider.DeclarationTypeProvider")
+	attr EString as declarationType := ' '
+	attr EString as name := '<set name>'
+	attr EString as assignment
+	@propertiesViewHidden
+	attr EString as uuid
+}
+ 
+@palette("Declaration")
+@disable(move,resize)
+@event("info.scce.cinco.product.scchart.events.SuspensionEvent")
+node Suspension {
+	style declarationStyle("${(suspensionType)}", "${(suspensionType == '<set suspension>' ? ' ' : empty condition ? ' ' : condition)}")
+	@possibleValuesProvider("info.scce.cinco.product.scchart.provider.SuspensionTypeProvider")
+	attr EString as suspensionType := '<set suspension>'
+	attr EString as condition
+	@propertiesViewHidden
+	attr EString as uuid
+}
+
+@palette("Declaration")
+@disable(move,resize)
+@event("info.scce.cinco.product.scchart.events.ActionEvent")
+node Action {
+	style declarationStyle("${actionType}", "${(actionType == '<set action>' ? ' ' : ((empty condition ? '' : condition).concat(empty effect ? '' : ' / '.concat(effect))))}")
+	@possibleValuesProvider("info.scce.cinco.product.scchart.provider.ActionTypeProvider")
+	attr EString as actionType := '<set action>' 
+	attr EString as condition
+	attr EString as effect
+	@propertiesViewHidden
+	attr EString as uuid
+}
+
+/* States */
+@disable(resize)
+@palette("States")
+node SimpleState {
+	style simpleStateStyle("${empty label ? name : label}")
+	incomingEdges (Transition,TerminationTransition,StrongAbortTransition)
+	outgoingEdges (Transition,DeferredTransition,HistoryTransition,DeferredHistoryTransition)
+	attr EString as name := "<set name>"
+	attr EString as label 
+}	
+
+@disable(resize)
+@palette("States")
+node InitialState extends SimpleState {
+	style initialStateStyle("${empty label ? name : label}")
+}							
+
+@disable(resize)
+@palette("States")
+node FinalState extends SimpleState {
+	style finalStateStyle("${empty label ? name : label}")
+}
+
+@disable(resize)
+@palette("States")
+node InitialFinalState extends SimpleState {
+	style initialFinalStateStyle("${empty label ? name : label}")
+}
+
+@disable(resize)
+@palette("States")
+node Connector extends SimpleState{
+	style connectorStyle
+}
+
+/* SCChart References */
+@event("info.scce.cinco.product.scchart.events.SCChartRefereceEvent")
+container SCChartReferece{
+	style sCChartRefereceStyle("${empty label ? name : label} @ ${reference.name} (${assignments})")
+	containableElements(RegionRef)
+	incomingEdges (Transition,TerminationTransition,StrongAbortTransition,DeferredTransition,TerminationDeferredTransition,StrongAbortDeferredTransition,HistoryTransition,TerminationHistoryTransition,StrongAbortHistoryTransition,DeferredHistoryTransition,StrongAbortDeferredHistoryTransition,TerminationDeferredHistoryTransition)
+	outgoingEdges (Transition,TerminationTransition,StrongAbortTransition,DeferredTransition,TerminationDeferredTransition,StrongAbortDeferredTransition,HistoryTransition,TerminationHistoryTransition,StrongAbortHistoryTransition,DeferredHistoryTransition,StrongAbortDeferredHistoryTransition,TerminationDeferredHistoryTransition)
+	@pvFileExtension("scchart")   
+	prime this::SCChart as reference
+	@readOnly
+	attr EString as inputsOutputsOfRef := ""
+	attr EString as name := "<set name>"
+	attr EString as assignments := ""
+	attr EString as label
+}
+
+container InitialSCChartReferece extends SCChartReferece{
+	style initialSCChartRefereceStyle("${empty label ? name : label} @ ${reference.name} (${assignments})")
+	@pvFileExtension("scchart")   
+	prime this::SCChart as reference
+}
+
+container FinalSCChartReferece extends SCChartReferece{
+	style finalSCChartRefereceStyle("${empty label ? name : label} @ ${reference.name} (${assignments})")
+	@pvFileExtension("scchart")   
+	prime this::SCChart as reference
+}
+
+container InitialFinalSCChartReferece extends SCChartReferece{
+	style initialFinalRefereceStyle("${empty label ? name : label} @ ${reference.name} (${assignments})")
+	@pvFileExtension("scchart")   
+	prime this::SCChart as reference
+}
+
+/*Transitions */
+edge AbstractTransition{
+	style abstractTransitionStyle
+	@possibleValuesProvider("info.scce.cinco.product.scchart.provider.AbstractTransitionPriorityProvider")
+	attr EString as priority := '1'
+}
+
+edge Transition extends AbstractTransition{
+	style transitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay 
+	attr EBoolean as immediate
+}
+
+edge TerminationTransition extends AbstractTransition{
+	style terminationTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as immediate
+}
+
+edge StrongAbortTransition extends AbstractTransition{
+	style strongAbortTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as immediate
+}
+
+edge DeferredTransition extends AbstractTransition{
+	style deferredTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as immediate
+}
+
+edge HistoryTransition extends AbstractTransition{
+	style historyTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}","${deepHistory ? '*' : ' '}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as deepHistory
+	attr EBoolean as immediate
+}
+
+edge TerminationDeferredTransition extends AbstractTransition{
+	style terminationDeferredTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as immediate
+}
+
+edge StrongAbortDeferredTransition extends AbstractTransition{
+	style strongAbortDeferredTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as immediate
+}
+
+edge TerminationHistoryTransition extends AbstractTransition{
+	style terminationHistoryTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}","${deepHistory ? '*' : ' '}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as deepHistory
+	attr EBoolean as immediate
+}
+
+edge StrongAbortHistoryTransition extends AbstractTransition{
+	style strongAbortHistoryTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}","${deepHistory ? '*' : ' '}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as deepHistory
+	attr EBoolean as immediate
+} 
+
+edge DeferredHistoryTransition extends AbstractTransition{
+	style deferredHistoryTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}","${deepHistory ? '*' : ' '}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as deepHistory
+	attr EBoolean as immediate
+} 
+
+edge StrongAbortDeferredHistoryTransition extends AbstractTransition{
+	style strongAbortDeferredHistoryTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}","${deepHistory ? '*' : ' '}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as deepHistory
+	attr EBoolean as immediate
+} 
+
+edge TerminationDeferredHistoryTransition extends AbstractTransition{
+	style terminationDeferredHistoryTransitionStyle("${priority.concat(': ').concat(condition == '<No condition>' || empty condition ? '' : (empty count_delay ? '' : count_delay.concat(' ')).concat(condition)).concat(effect == '<No effect>' ? '' : ' / '.concat(effect))}","${deepHistory ? '*' : ' '}")
+	attr EString as condition := '<No condition>'
+	attr EString as effect := '<No effect>'
+	attr EString as count_delay
+	attr EBoolean as deepHistory
+	attr EBoolean as immediate
+}

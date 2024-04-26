@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.jabc.cinco.meta.feature"
+      label="Cinco Feature"
+      version="2.0.1"
+      plugin="de.jabc.cinco.meta.branding">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="de.jabc.cinco.meta.core.mgl.sdk"
+         version="2.0.1"/>
+
+   <includes
+         id="de.jabc.cinco.meta.core.ge.style.sdk"
+         version="2.0.1"/>
+
+   <includes
+         id="de.jabc.cinco.meta.productdefinition.sdk"
+         version="2.0.1"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ge.style.fragment"
+         download-size="12"
+         install-size="25"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ge.style.model"
+         download-size="108"
+         install-size="231"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.mgl.model"
+         download-size="265"
+         install-size="751"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.pluginregistry"
+         download-size="45"
+         install-size="99"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.referenceregistry"
+         download-size="82"
+         install-size="174"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.utils"
+         download-size="553"
+         install-size="1286"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.wizards"
+         download-size="115"
+         install-size="659"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.branding"
+         download-size="1181"
+         install-size="10639"
+         version="2.0.1"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ui"
+         download-size="152"
+         install-size="304"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core"
+         download-size="18"
+         install-size="36"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.libraries"
+         download-size="3837"
+         install-size="4195"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.jabcprojectgenerator"
+         download-size="8"
+         install-size="12"
+         version="2.0.1"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.generator.runtime"
+         download-size="16"
+         install-size="32"
+         version="2.0.1"
+         unpack="false"/>
+         
+   <plugin
+         id="de.jabc.cinco.meta.plugin.mcam"
+         download-size="45"
+         install-size="112"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.mcam.runtime"
+         download-size="162"
+         install-size="297"
+         version="2.0.1"
+         unpack="false"/>
+         
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.gratext"
+         download-size="264"
+         install-size="561"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.gratext.runtime"
+         download-size="141"
+         install-size="304"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ge.style"
+         download-size="1569"
+         install-size="2007"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.ge.style.generator"
+         download-size="741"
+         install-size="1641"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.core.mgl.generator"
+         download-size="343"
+         install-size="811"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.primeviewer"
+         download-size="74"
+         install-size="147"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.executer"
+         download-size="353"
+         install-size="768"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.generator"
+         download-size="12"
+         install-size="22"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.runtime"
+         download-size="278"
+         install-size="652"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.util"
+         download-size="121"
+         install-size="300"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin"
+         download-size="182"
+         install-size="399"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.modelchecking"
+         download-size="186"
+         install-size="406"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.modelchecking.runtime"
+         download-size="452"
+         install-size="1000"
+         version="2.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.startup"
+         download-size="7"
+         install-size="8"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="de.jabc.cinco.meta.plugin.event.generator"
+         download-size="151"
+         install-size="322"
+         version="2.0.1"
+         fragment="true"
+         unpack="false"/>
+
+</feature>
