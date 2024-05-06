@@ -1,0 +1,2 @@
+Download: rtsys.informatik.uni-kiel.de/~kieler/files/nightly/sccharts/cli/kicodia-win.bat
+Put in this directory.
